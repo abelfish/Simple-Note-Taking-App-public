@@ -25,5 +25,15 @@ npm i
 To use the app, run the following command:
 
 ```
+cd back-end
+npm install
 npm start
+
+cd front-end
+npm install
+npm start
+```
+
+```
+
 ```
