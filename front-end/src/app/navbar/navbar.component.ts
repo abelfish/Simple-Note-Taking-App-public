@@ -8,9 +8,7 @@ import { UserService } from '../user.service';
   template: `
     <header>
       <nav class=" border-gray-200 my-3 px-4  dark:bg-gray-800 w-full">
-        <div
-          class="flex flex-wrap justify-between items-center mx-auto "
-        >
+        <div class="flex flex-wrap justify-between items-center mx-auto ">
           <a href="" class="flex items-center">
             <img
               src="https://flowbite.com/docs/images/logo.svg"
@@ -19,7 +17,7 @@ import { UserService } from '../user.service';
             />
             <span
               class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-              >The Perfect Note Taker</span
+              >The Simple Note Taker</span
             >
           </a>
 
@@ -38,10 +36,7 @@ import { UserService } from '../user.service';
               >
             </div>
             <ng-template #logoutButton>
-             
-              <label for="" class = "mx-4">
-                Hi {{ userState.fullname }}
-              </label>
+              <label for="" class="mx-4"> Hi {{ userState.fullname }} </label>
               <button
                 (click)="logout()"
                 class="bg-blue-700 text-white  hover:bg-blue-500 focus:ring-4 focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 lg:py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
@@ -56,9 +51,7 @@ import { UserService } from '../user.service';
           >
             <ul
               class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
-            >
-              
-            </ul>
+            ></ul>
           </div>
         </div>
       </nav>
@@ -76,7 +69,7 @@ export class NavbarComponent {
       this.userState = userState;
     });
   }
-  
+
   logout() {
     this.userService.logout();
   }

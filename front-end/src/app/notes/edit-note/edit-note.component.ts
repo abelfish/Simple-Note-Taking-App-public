@@ -6,6 +6,7 @@ import { map, mergeMap } from 'rxjs/operators';
 import IUserState from 'src/app/IUserState.interface';
 import { NoteService } from 'src/app/note.service';
 import { UserService } from 'src/app/user.service';
+import { environment } from 'src/environments/environment';
 import INote from '../INotes.interface';
 
 @Component({
@@ -184,7 +185,7 @@ export class EditNoteComponent {
         },
 
         // Set the image upload URL.
-        imageUploadURL: 'http://localhost:3000/api/notes/images/ ',
+        imageUploadURL: `${environment.SERVER}/api/notes/images/ `,
 
         // Set request type.
         imageUploadMethod: 'POST',
@@ -210,7 +211,7 @@ export class EditNoteComponent {
             const img = $img.attr('src').split('/').pop();
             xhttp.open(
               'DELETE',
-              'http://localhost:3000/api/notes/images/' + img,
+              `${environment.SERVER}/api/notes/images/ ` + img,
               true
             );
             xhttp.setRequestHeader('Authorization', 'Bearer ' + jwt);

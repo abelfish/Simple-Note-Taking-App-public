@@ -6,6 +6,7 @@ import INote from '../INotes.interface';
 import { FormBuilder } from '@angular/forms';
 import { UserService } from 'src/app/user.service';
 import IUserState from 'src/app/IUserState.interface';
+import {environment} from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-shared-note',
@@ -96,7 +97,7 @@ export class EditSharedNoteComponent {
         },
 
         // Set the image upload URL.
-        imageUploadURL: 'http://localhost:3000/api/notes/images/ ',
+        imageUploadURL: `${environment.SERVER}/api/notes/images/ `,
 
         // Set request type.
         imageUploadMethod: 'POST',
@@ -123,7 +124,7 @@ export class EditSharedNoteComponent {
             const img = $img.attr('src').split('/').pop();
             xhttp.open(
               'DELETE',
-              'http://localhost:3000/api/notes/images/' + img,
+              `${environment.SERVER}/api/notes/images/` + img,
               true
             );
             xhttp.setRequestHeader('Authorization', 'Bearer ' + jwt);

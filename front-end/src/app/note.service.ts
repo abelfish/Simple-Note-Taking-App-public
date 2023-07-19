@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import INote from './notes/INotes.interface';
-import { environment } from '../environments/environment.development';
+import { environment } from '../environments/environment';
 import { map } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 

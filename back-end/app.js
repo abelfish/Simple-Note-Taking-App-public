@@ -12,15 +12,10 @@ const noteRouter = require('./routers/noteRouter');
 
 // Mongoose
 // connect to database
-const credentials = {
 
-  user: 'root',
-  pass: 'root'
-};
 
 mongoose
-  .connect(DB_SERVER,
-    credentials
+  .connect(DB_SERVER
   )
   .then(() => {
     console.log('Connected to database');
